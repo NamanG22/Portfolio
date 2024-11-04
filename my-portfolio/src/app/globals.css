@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: inherit;
+  transition-property: all;
+  transition-duration: 0.6s;
+  transition-timing-function: ease;
+}
+
+html,
+body {
+  box-sizing: border-box;
+  height: 100%;
+  width: 100%;
+}
+
+.container { 
+  justify-content: center;
+  display: flex;
+}
+
+.btn {
+  position: relative;
+  text-transform: uppercase;
+  width: 100%;
+  line-height: 45px;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.btn-2 {
+  letter-spacing: 0;
+  position: relative;
+}
+
+.btn-2:hover,
+.btn-2:active {
+  letter-spacing: 0.3em;
+}
+
+.btn-2:before,
+.btn-2:after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: width 0.35s ease;
+}
+
+.btn-2:before {
+  top: 0;
+  transform: translateX(-50%);
+}
+
+.btn-2:after {
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+.btn-2:hover:before,
+.btn-2:hover:after {
+  width: 70%;
+}
+
